@@ -1,0 +1,9 @@
+<div class="steps">
+    <div class="step" *ngFor="let item of steps">
+        <header>
+            <img [src]="'assets/imgs/tutorial/'+(item.img)+'.png'" alt="">
+            <h3>{{item.header}}</h3>
+        </header>
+        <p>{{item.text}}</p>
+    </div>
+</div>

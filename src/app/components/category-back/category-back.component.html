@@ -1,0 +1,11 @@
+<div class="swiper back-gallery" *ngFor="let swiper of [].constructor(slidersStats.countSliders); let swiperPos = index" [id]="'gallery'+(swiperPos+1)">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let sliders of [].constructor(slidersStats.countSliders); let swiperSliders = index">
+            <picture *ngFor="let objs of [].constructor(slidersStats.countObjs); let slidersObj = index">
+                <source [srcset]="'assets/imgs/categories-galleries/avif/'+(swiperPos * (slidersStats.countSliders * slidersStats.countObjs) + swiperSliders * slidersStats.countObjs + slidersObj + 1)+'.avif'" type="image/avif">
+                <source [srcset]="'assets/imgs/categories-galleries/webp/'+(swiperPos * (slidersStats.countSliders * slidersStats.countObjs) + swiperSliders * slidersStats.countObjs + slidersObj + 1)+'.webp'" type="image/webp">
+                <img [src]="'assets/imgs/categories-galleries/png/'+(swiperPos * (slidersStats.countSliders * slidersStats.countObjs) + swiperSliders * slidersStats.countObjs + slidersObj + 1)+'.png'" alt="" >
+            </picture>
+        </div>
+    </div>
+</div>

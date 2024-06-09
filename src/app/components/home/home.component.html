@@ -1,0 +1,88 @@
+<div class="swiper" id="wrapper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <section id="home">
+                <div class="bg reverse" id="fox"></div>
+                <article id="greetings">
+                    <header>
+                        <h2>Transform Your Space with Custom Comfort</h2>
+                    </header>
+                    <p>Turn your home into a cozy nest with our unique custom rugs. Create your own world of comfort
+                        with every step. Purchase individuality—buy rugs that tell the story of your coziness. Open the
+                        door to a world of comfort right now.</p>
+                    <a href="" id="make-order" slide-to="form" class="slide-to">Make an order</a>
+                </article>
+            </section>
+        </div>
+
+        <div class="swiper-slide">
+            <section id="categories">
+                <div class="back-galleries">
+                    <app-category-back></app-category-back>
+                </div>
+                <h2>Categories</h2>
+                <div class="categories-container">
+                    <app-home-category *ngFor="let item of categories" [imageUrl]="item[0]" [link]="item[1]"
+                        [header]="item[2]" [des]="item[3]"></app-home-category>
+                </div>
+            </section>
+        </div>
+
+        <div class="swiper-slide">
+            <section id="tutorial">
+                <header><h2>tutorial</h2></header>
+                <app-tutorial-accordion-box></app-tutorial-accordion-box>
+            </section>
+        </div>
+        <div class="swiper-slide">
+            <section id="form">
+                <div class="form">
+                    <div class="col-end">
+                        <div id="greetings-form">
+                            <header>
+                                <h3>Welcome to the order registration form</h3>
+                            </header>
+                            <p>
+                                Here you can place an order by filling out your name, email and contact phone number. With this form, you will not be able to track your order, so we recommend that you either register or log in. Have a nice day
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-up">
+                        <div class="order-box">
+                            <p>Form to buy</p>
+                            <form>
+                              <div class="user-box">
+                                <input required="" name="" type="text">
+                                <label>Name</label>
+                              </div>
+                              <div class="user-box">
+                                <input required="" name="" type="email">
+                                <label>Email</label>
+                              </div>
+                              <div class="user-box">
+                                <input required="" name="" type="phone">
+                                <label>Phone</label>
+                              </div>
+                              <div class="user-box">
+                                  <button>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Submit
+                                  </button>
+                              </div>
+                            </form>
+                            <p>Would you like to track your order? <span class="a2">Sign up!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="swiper-slide">
+            <app-footer></app-footer>
+        </div>
+        
+    </div>
+</div>

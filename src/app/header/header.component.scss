@@ -1,0 +1,106 @@
+$font: 'Single Day', cursive;
+$header-size:12vh;
+$size-index: calc(1vw + 1vh);
+$tabs-color:rgb(0, 0, 44);
+header{
+    position: fixed;
+    top: 0px;
+    left: 0vw;
+    width: 100vw;
+    height: $header-size;
+    z-index: 5;
+    padding: 5px 2%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    #header-bg{
+        background-color: rgba(245, 245, 245, 0.03);
+        backdrop-filter: blur(4px);
+        z-index: -1;
+        box-shadow: none;
+    }
+    .logo{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        max-width: 35%;
+        a{
+            height: min-content;
+            display: block;
+            text-decoration: none;
+        }
+        a:first-of-type{
+            height: calc($header-size - 20px);
+        }
+        img{
+            height: calc($header-size - 20px);
+            border-radius: 20px;
+        }
+        h1{
+            text-transform: uppercase;
+            color: rgb(0, 0, 31);
+            font-family: $font;
+            background: linear-gradient(to right,rgb(241, 172, 12), rgb(4, 150, 212));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0px;
+            padding: 0px;
+            font-size: calc($size-index*1.5);
+        }
+    }
+    .tabs{
+        display: flex;
+        font-family: $font;
+        font-size: calc($size-index*1.7);
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 2;
+        .user-func, .func{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        p{
+            margin: 0px;
+        }
+        .func div, .user-func div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 0px 10px;
+            a{
+                text-transform: capitalize;
+                text-decoration: none;
+                color: $tabs-color;
+                transition-duration: 0.2s;
+                padding: 0px 10px;
+            }
+            p{
+                margin: 0px 10px;
+                width: min-content;
+                transition-duration: 0.2s;
+                cursor: pointer;
+            }
+            hr{
+                height: 2px;
+                width: 0%;
+                transition-duration: 0.2s;
+                border: none;
+                background-color: $tabs-color;
+                margin: 0;
+            }
+        }
+        .user-func p{
+            font-size: calc($size-index * 1.2) !important;
+        }
+        .func div:hover hr, .user-func div:hover hr{
+            width: 100%;
+        }
+    }
+}

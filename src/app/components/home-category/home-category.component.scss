@@ -1,0 +1,139 @@
+$size-index: calc(1vw + 1vh);
+$font-header: 'Single Day', cursive;
+$font: 'Caveat', cursive;
+$category-width: calc($size-index * 13);
+$category-height: calc($size-index * 16);
+$hover-secunds: 0.2s;
+@keyframes rotateBG {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(362deg);
+    }
+}
+.category-container{
+    width: $category-width;
+    height: $category-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    .category{
+        width: $category-width;
+        height: $category-height;
+        max-width: 23vw;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: $hover-secunds;
+        transform-origin: center;
+        margin: auto;
+        position: absolute;
+        .rotate-bg{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            border-radius: 25px;
+            transition-duration: $hover-secunds;
+            .rotate-bg-animate{
+                margin-left: -25%;
+                margin-top: -25%;
+                width: 150%;
+                height: 150%;
+                animation: rotateBG 5s linear infinite;
+            }
+            .rotate-bg-part{
+                width: 50%;
+                height: 50%;
+                border-radius: 1000px;
+            }
+            .rotate-bg-part:first-child{
+                background-color: goldenrod;
+            }
+        }
+        .category-content{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            box-sizing: border-box;
+    
+            .category-img{
+                width: 100%;
+                height: 70%;
+                background-size: cover;
+                background-position: center;
+            }
+            .category-text{
+                width: 100%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                padding: 2%;
+                box-sizing: border-box;
+                h3{
+                    font-family: $font-header;
+                    font-size: calc($size-index * 1.1);
+                }
+                p{
+                    font-family: $font;
+                    display: block;
+                    font-size: calc($size-index * 0.9);
+                }
+                header, h3, p{
+                    text-transform: capitalize;
+                    width: 100%;
+                    color: rgb(0, 0, 49);
+                    text-decoration: none;
+                    margin: 0px;
+                }
+            }
+            h3, p, a{
+                transition-duration: $hover-secunds;
+            }
+            a{
+                font-family: $font;
+                width: fit-content !important;
+                text-transform: capitalize;
+                color: rgb(0, 0, 49);
+                text-decoration: none;
+                margin: 0px;
+                font-size: calc($size-index * 0.75);
+                margin: 10px;
+                transition-duration: $hover-secunds;
+            }
+        }
+    }
+    .category:hover{
+        width: calc($category-width * 1.1);
+        height: calc($category-height * 1.1);
+        .category-content .category-text header h3{
+            font-size: calc($size-index * 1.1 * 1.1);
+        }
+        .category-content .category-text .category-des{
+            font-size: calc($size-index * 0.9 * 1.1);
+        }
+        .category-content a{
+            font-size: calc($size-index * 0.75 * 1.1);
+        }
+    }
+    .category:hover .rotate-bg{
+        left: -9px;
+        top: -9px;
+        width: calc(100% + 18px);
+        height: calc(100% + 18px);
+    }
+}

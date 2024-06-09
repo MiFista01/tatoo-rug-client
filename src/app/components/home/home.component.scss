@@ -1,0 +1,329 @@
+$size-index: calc(1vw + 1vh);
+$font-header: "Single Day", cursive;
+$font: "Caveat", cursive;
+$blurGreetings: blur(4px);
+$greeteings-back: url("/assets/imgs/home/home-section.jpg");
+$shadow-blur: calc($size-index * 1.5);
+$shadow-padding: calc($size-index * 1);
+$shadow-color: rgba(8, 103, 43, 0.5);
+#home {
+    padding-left: 5%;
+    align-items: start;
+}
+h2 {
+    width: 100%;
+    font-family: $font;
+    font-size: calc($size-index * 3.5);
+    margin-bottom: 0px;
+}
+#fox {
+    background-image: $greeteings-back;
+    margin: 0px;
+    padding: 0px;
+}
+#greetings {
+    width: calc($size-index * 30);
+    border-radius: 10px;
+    color: white;
+    padding: 25px;
+    box-sizing: border-box; /* Важно для корректного расчета размеров с учетом границы */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+    // backdrop-filter: $blurGreetings;
+    // box-shadow: 0px 0px 5px 5px rgba(1, 0, 53, 0.35);
+    // background-color: rgba(1, 0, 53, 0.25);
+    header {
+        width: 100%;
+        position: relative;
+    }
+    h2 {
+        font-size: calc($size-index * 1.3);
+        letter-spacing: 5px;
+        padding: 0px 5px;
+        text-shadow: 10px 10px 10px black;
+    }
+    p {
+        width: 100%;
+        font-family: $font;
+        font-size: calc($size-index * 1.1);
+        font-weight: 700;
+        position: relative;
+        margin: 0px;
+        animation: showGreetings 2s 2s forwards;
+        padding: 5px;
+        text-shadow: 10px 10px 10px black;
+    }
+    a {
+        display: block;
+        font-family: $font;
+        padding: 10px 20px;
+        // border: 6px inset rgb(255, 255, 255);
+        background-color: rgb(11, 60, 113);
+        color: white;
+        border-radius: 20px;
+        font-size: calc($size-index);
+        text-decoration: none;
+        letter-spacing: 3px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+#categories {
+    padding: 3%;
+    box-sizing: border-box;
+    h2 {
+        text-align: center;
+        z-index: 1;
+    }
+    .categories-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .back-galleries {
+        position: absolute;
+        top: -25vh;
+        left: -25vw;
+        width: 125vw;
+        height: 125vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        transform: rotate(-10deg);
+    }
+}
+#tutorial {
+    background-image: url("/assets/imgs/home/tutorial.jpg");
+
+    justify-content: center;
+    flex-direction: column;
+    z-index: 3;
+    header {
+        width: 100%;
+        h2 {
+            text-align: center;
+            z-index: 1;
+            color: white;
+            text-transform: capitalize;
+        }
+    }
+}
+#form {
+    background-image: url("/assets/imgs/home/home-form.jpg");
+    align-items: end;
+    padding: 0px 3%;
+    box-shadow: inset 0px 0px $shadow-blur $shadow-padding $shadow-color;
+    .form{
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10%;
+        height: 70%;
+        .col-up, .col-end{
+            width: 40%;
+            height: 100%;
+        }
+        #greetings-form{
+            width: 100%;
+            backdrop-filter: blur(6px);
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            box-sizing: border-box;
+            border: 5px solid rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+            h3{
+                font-size: calc($size-index * 1.4);
+                margin: 0px;
+            }
+            p{
+                font-size: calc($size-index * 1.1);
+                margin: 0px;
+            }
+        }
+        .order-box {
+            width: 100%;
+            padding: 40px;
+            background: rgba(238, 238, 238, 0.9);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            color: black !important;
+            p:first-child {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin: 0px;
+            }
+            p:last-child {
+                color: #111111;
+                font-size: 14px;
+                margin: 0px;
+                margin-top: 10px;
+            }
+        
+            .a2 {
+                color: #121212;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        
+            .a2:hover {
+                background: transparent;
+                color: #010031;
+                border-radius: 5px;
+                text-shadow: 0px 0px 1px #010031;
+            }
+            form{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .user-box {
+                    position: relative;
+                    width: 48%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input {
+                        width: 100%;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                        border: none;
+                        border-bottom: 1px solid black;
+                        outline: none;
+                        background: transparent;
+                        background: none;
+                    }
+                    input:focus ~ label,
+                    input:valid ~ label,
+                    input:-webkit-autofill ~ label,
+                    input:-webkit-autofill:focus ~ label, 
+                    input:-webkit-autofill:valid ~ label {
+                        top: -20px;
+                        left: 0;
+                        font-size: 12px;
+                    }
+                    label {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        pointer-events: none;
+                        transition: 0.5s;
+                    }
+                    button {
+                        position: relative;
+                        display: inline-block;
+                        padding: 10px 20px;
+                        font-weight: bold;
+                        font-size: 16px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        overflow: hidden;
+                        transition: 0.5s;
+                        letter-spacing: 3px;
+                        border: none;
+                        outline: none;
+                        background-color: white;
+                        cursor: pointer;
+                        span {
+                            position: absolute;
+                            display: block;
+                        }
+                    
+                        span:nth-child(1) {
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 2px;
+                            background: linear-gradient(90deg, transparent, #fff);
+                            animation: btn-anim1 1.5s linear infinite;
+                        }
+                        span:nth-child(2) {
+                            top: -100%;
+                            right: 0;
+                            width: 2px;
+                            height: 100%;
+                            background: linear-gradient(180deg, transparent, #fff);
+                            animation: btn-anim2 1.5s linear infinite;
+                            animation-delay: 0.375s;
+                        }
+                        span:nth-child(3) {
+                            bottom: 0;
+                            right: -100%;
+                            width: 100%;
+                            height: 2px;
+                            background: linear-gradient(270deg, transparent, #fff);
+                            animation: btn-anim3 1.5s linear infinite;
+                            animation-delay: 0.75s;
+                        }
+                        span:nth-child(4) {
+                            bottom: -100%;
+                            left: 0;
+                            width: 2px;
+                            height: 100%;
+                            background: linear-gradient(360deg, transparent, #fff);
+                            animation: btn-anim4 1.5s linear infinite;
+                            animation-delay: 1.125s;
+                        }
+                    }
+                }
+                button:hover {
+                    background-color: #272727 !important;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+        }
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+    
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+    
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+    
+            50%,100% {
+                right: 100%;
+            }
+        }
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+    
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+$size-index: calc(1vw + 1vh);
+#gallery{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top: 6.5%;
+    .item{
+        width: calc($size-index * 20.5);
+        height: calc($size-index * 12);
+        margin: 1%;
+        border-radius: 15px;
+        backdrop-filter: blur(4px);
+        background-color: rgba(245, 245, 245, 0.3);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        box-shadow: 3px 3px 3px 2px rgba(14, 0, 56, 0.2), 6px 6px 6px 3px rgba(14, 0, 56, 0.4);
+        border: 5px solid rgba(0, 0, 139, 0.2);
+        a{
+            display: block;
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+            height: 100%;
+        }
+        .text{
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+            header{
+                h3{
+                    font-size: calc($size-index * 1.2);
+                    margin: 0px
+                }
+            }
+            p{
+                font-size: calc($size-index * 1);
+                margin: 0px;
+            }
+        }
+    }
+}

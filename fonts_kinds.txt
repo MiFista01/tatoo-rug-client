@@ -1,0 +1,12 @@
+font-family: 'Andika', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Comfortaa', sans-serif;
+font-family: 'Dela Gothic One', sans-serif;
+font-family: 'Klee One', cursive;
+font-family: 'Prosto One', sans-serif;
+font-family: 'Rubik Mono One', monospace;
+font-family: 'Ruslan Display', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Shantell Sans', cursive;
+font-family: 'Single Day', cursive;
+font-family: 'Unbounded', sans-serif;

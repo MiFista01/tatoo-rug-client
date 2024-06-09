@@ -1,0 +1,20 @@
+<div class="swiper" id="wrapper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <section id="gallery">
+                <div class="item" *ngFor="let item of galleryItems">
+                    <a href="item/{{item.link}}" style="background-image: url('{{item.img}}');"></a>
+                    <div class="text">
+                        <header>
+                            <h3>{{item.title}}</h3>
+                        </header>
+                        <p>{{item.des.substring(0, 120)}}...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="swiper-slide">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
